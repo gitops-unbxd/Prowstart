@@ -1,0 +1,118 @@
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-6pznh[0m
+{"level":"warn","ts":1569830255.9217496,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569830255.9221127,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-9sklb[0m
+{"level":"warn","ts":1569830256.5009305,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569830256.501993,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-gitops-unbxd-prowstart-mas-ddt8m[0m
+{"level":"warn","ts":1569830262.5551524,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569830262.8699546,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/Prowstart.git @ 4cb56672166aa9140db61dd6b020c103d599716b in path /workspace/source"}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:4cb56672166aa9140db61dd6b020c103d599716b
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/prowstart/Chart.yaml to 0.0.3
+Updating repository in charts/prowstart/values.yaml to 012629307706.dkr.ecr.us-west-2.amazonaws.com/************/prowstart
+Updating tag in charts/prowstart/values.yaml to 0.0.3
+Tag v0.0.3 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ************-Prowstart-master-3
+Applying changes 
+upserted PipelineResource ************-prowstart-master for the git repository https://github.com/************/Prowstart.git
+upserted Task ************-prowstart-master-87pfp-from-build-pack-3
+upserted Pipeline ************-prowstart-master-87pfp-3
+created PipelineRun ************-prowstart-master-87pfp-3
+created PipelineStructure ************-prowstart-master-87pfp-3
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-2thq9[0m
+{"level":"warn","ts":1569830271.9571254,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569830271.9576607,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tqwjr[0m
+{"level":"warn","ts":1569830272.8653667,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569830272.8664935,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/prowstart\""}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-gitops-unbxd-prowstart-master-9ghfj[0m
+{"level":"warn","ts":1569830314.92353,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569830315.160584,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/************/Prowstart.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:4cb56672166aa9140db61dd6b020c103d599716b
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/prowstart main.go
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0005] EXPOSE 8080                                  
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] ENTRYPOINT ["/prowstart"]                    
+[36mINFO[0m[0005] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0005] COPY ./bin/ /                                
+[36mINFO[0m[0005] Taking snapshot of files...                  
+2019/09/30 07:58:45 pushed blob: sha256:a5d6e38f72ab378ab65cde32eeccddc0e702a0df9091fd22d49da130cdcda9b9
+2019/09/30 07:58:46 pushed blob: sha256:c37233067e3309d188d98d47e824c92ffcd479848a7e6aec219a9997a817154c
+2019/09/30 07:58:46 012629307706.dkr.ecr.us-west-2.amazonaws.com/************/prowstart:0.0.3: digest: sha256:f1f89328ebd3f7e7f37b018d9f78b24072527be38daedb2582a780a49ff41179 size: 428
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/prowstart to an unshallow repository
+Generating change log from git ref 9f0dcb982b9682f74081a36e933f239e5a21d8bd => e031d83a796176e43f73b651d085517c6541d70a
+WARNING: No release found for ************/Prowstart and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/************/Prowstart/releases/tag/v0.0.3
+generated: /workspace/source/charts/prowstart/templates/release.yaml
+Created Release prowstart-0-0-3 resource in namespace **
+Updating PipelineActivity ************-prowstart-master-3 with version 0.0.3
+Updated PipelineActivities ************-prowstart-master-3 with release notes URL: https://github.com/************/Prowstart/releases/tag/v0.0.3
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file prowstart-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mgitops-unbxd-prowstart-master-87pfp-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app prowstart version 0.0.3 to namespace **-staging
+Created Pull Request: https://github.com/************/environment-flasherweak-staging/pull/2
+Pull Request https://github.com/************/environment-flasherweak-staging/pull/2 is merged at sha c68176f97a80272eae5a0ac7e50b76c7ca8261f0
+Pull Request merged but we are not waiting for the update pipeline to complete!
